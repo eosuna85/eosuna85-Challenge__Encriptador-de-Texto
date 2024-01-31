@@ -358,10 +358,10 @@ footer{
     }
 }
 
-@media screen and (max-width: 375px) and (max-height: 933px){
+@media screen and (max-width: 480px) and (max-height: 933px){
 
     .container {
-        max-width: 375px;
+        max-width: 480px;
         max-height: 933px;
         margin: 0 auto;
     }
