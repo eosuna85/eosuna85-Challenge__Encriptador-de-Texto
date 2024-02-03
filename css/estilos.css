@@ -21,6 +21,18 @@
     box-sizing: border-box;
 }
 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-family: var(--base-font-family);
 }
@@ -28,9 +40,31 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #f6f0f083;
-    background: linear-gradient(0deg, rgba(231,212,212,0.2273109927564776) 16%, rgba(221,197,197,1) 93%);
+    background-image: url(../img/Fondo.jpg);
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
+
+body::before {
+    content: '';
+    background-color:transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(231,212,212,0.2273109927564776) 16%, rgba(221,197,197,1) 93%);
+    opacity: 0.6;
+    z-index: -1;
+}
+
 
 a {
     text-decoration: none;
@@ -59,12 +93,11 @@ img {
     justify-content: space-between;
 }
 .logo{
-    width: 120px;
+    width: 32px;
     height: 48px;   
 }
 
 .logo {
-    width: 15%;
     transition: transform 0.7s ease;
 }
 
@@ -139,6 +172,7 @@ img {
     font-size: 16px;
     font-weight: 400;
     transition: .3s ease-in-out;
+    cursor: pointer;
 }
 
 .boton:hover{
@@ -197,8 +231,9 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 936px;
     padding: 10px;
+    position: relative;
+    z-index: 0;
 }
 
 .icono__git {
@@ -209,6 +244,19 @@ footer{
     transform: scale(1.5);
 }
 
+
+footer::before {
+    content: '';
+    background-color:transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(231,212,212,0.2273109927564776) 16%, rgba(221,197,197,1) 93%);
+    /* opacity: 0.5; */
+    z-index: -1;
+}
 /*! Adaptación cambio de tamaño de pantalla  */
 
 @media screen and (max-width: 768px){
@@ -300,7 +348,6 @@ footer{
     
     .seccion__buscador{
         width: 688px;
-        height: 133px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -362,7 +409,6 @@ footer{
 
     .container {
         max-width: 480px;
-        max-height: 933px;
         margin: 0 auto;
     }
 
