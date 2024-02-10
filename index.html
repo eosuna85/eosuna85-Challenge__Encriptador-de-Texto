@@ -5,43 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge 1 - Encriptador Alura</title>
-    <link rel="stylesheet" href="reset.css">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="icon" href="./img/iconoE.ico">
 </head>
 
 <body>
-<main class="main__encriptador container">
+    <header>
+        <a href="index.html"><img class="logo" src="./img/Logo.png" alt="Logo Alura"></a>
+        <h1>Encriptador de Texto</h1>
+    </header>
+    <main class="main__encriptador container">
         <div class="logo__espacio"><!-- Sección para insertar el texto -->
-            <img class="logo" src="./img/Logo.png" alt="Logo Alura">
             <section class="ingresar__texto">
-                <textarea class="area__de__texto" name="ingresar texto" id="area__de__texto" cols="30" rows="10"
+                <textarea class="area__de__texto" name="ingresar texto" id="areaDeTexto" cols="30" rows="10"
                     placeholder="Ingrese el texto aquí"></textarea>
                 <div class="seccion__botones">
                     <div class="mensaje__alerta">
-                        <img class="img__alerta" src="./img/bi_exclamation-circle-fill.png" alt="alerta">
-                        <p>Solo letras minúsculas y sin acentos</p>
+                        <svg class="icono__alerta" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                            viewBox="-2 -1.5 24 24">
+                            <path fill="currentColor"
+                                d="M10 20.393c-5.523 0-10-4.477-10-10c0-5.522 4.477-10 10-10s10 4.478 10 10c0 5.523-4.477 10-10 10m0-15a1 1 0 0 0-1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0-1-1m0 10a1 1 0 1 0 0-2a1 1 0 0 0 0 2" />
+                        </svg>
+                        <p class="mensaje__alerta__estilo" id="mensajeAlerta">Solo letras minúsculas y sin acentos</p>
                     </div>
                     <div class="botones">
-                        <button onclick="" class="boton">Encriptar</button>
-                        <button class="boton" id="desencriptar" disabled>Desencriptar</button>
+                        <button onclick="encriptar" class="boton">Encriptar</button>
+                        <button class="boton" id="desencriptar">Desencriptar</button>
                     </div>
                 </div>
             </section>
 
         </div>
         <!-- Sección dendo debe mostarse el mensaje -->
-        <section class="seccion__buscador">
-            <img class="img__buscador" src="./img/Muñeco.png" alt="buscador">
-            <div class="textos__buscador">
-                <p class="texto__mensaje1">Ningún mensaje fue encontrado</p>
-                <p class="texto__mensaje2">Ingresa el texto que desees encriptar o desencriptar.</p>
+        <section class="seccion__buscador" id="seccionBuscador">
+            <div class="buscador__inicial">
+                <img class="img__buscador" src="./img/Muñeco.png" alt="buscador">
+                <div class="textos__buscador">
+                    <p class="texto__mensaje1">Ningún mensaje fue encontrado</p>
+                    <p class="texto__mensaje2">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
             </div>
+            <textarea class="area__de__texto__buscador" name="textoSecundario" id="areaDeTextoBuscador" cols="30"
+                rows="10" placeholder=""></textarea>
+            <button class="boton__copiar" id="copiar">Copiar</button>
+
         </section>
 
     </main>
     <footer>
-        <p class="copyright">© Copyright Encriptador de texto - 2024 | By Erika Osuna</p>
+        <p class="copyright">Encriptador de texto - 2024 | By Erika Osuna</p>
         <div>
             <a href="https://github.com/eosuna85/eosuna85-Challenge__Encriptador-de-Texto" target="_blank"><svg
                     class="icono__git" xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +77,7 @@
                 </svg></a>
         </div>
     </footer>
-    <script src="app.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
