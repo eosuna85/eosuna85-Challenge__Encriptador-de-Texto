@@ -60,7 +60,7 @@ body::before {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(0deg, rgba(231, 212, 212, 0.2273109927564776) 16%, rgba(221, 197, 197, 1) 93%);
+    background: linear-gradient(0deg, rgba(212, 225, 231, 0.167) 16%, rgb(216, 182, 182) 93%);
     z-index: -1;
     backdrop-filter: blur(1.7px);
 }
@@ -91,14 +91,16 @@ header {
     display: flex;
     align-items: center;
     text-align: center;
-    gap: 240px;
+    gap: 300px;
     padding: 40px 100px 10px;
 }
 
 h1 {
     font-family: var(--alternative-font-family);
     font-size: 50px;
-    text-decoration: underline 2px var(--transition-solid);
+    /* text-decoration: underline dashed 2px var(--transition-solid);
+    */
+    text-shadow: #444547c8 5px 3px 2px;
     font-weight: 500;
     color: var(--dark-solid-1);
     margin-top: 10px;
@@ -329,7 +331,7 @@ footer {
 
 footer::before {
     content: '';
-    background-color: rgba(221, 197, 197, 1);
+    background-color: rgba(216, 182, 182);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -352,11 +354,20 @@ footer::before {
 
     .main__encriptador {
         display: flex;
-        padding: 73.4px 40px 40px 40px;
+        padding: 60px 40px 20px 40px;
         flex-direction: column;
         /* align-items: center; */
         justify-content: space-between;
         gap: 64px;
+    }
+
+    header{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    h1{
+        font-size: 40px;
     }
 
     .logo {
@@ -503,10 +514,22 @@ footer::before {
         gap: 30px;
     }
 
+    header{
+        flex-direction: column;
+        align-items: start;
+        gap: 8px;
+        padding: 40px 40px 0px 40px;
+    }
+
+
     .logo {
         width: 32px;
         height: 48px;
         margin-bottom: 30px;
+    }
+
+    h1{
+        font-size: 30px;
     }
 
     .botones {
