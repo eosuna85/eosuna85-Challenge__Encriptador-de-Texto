@@ -62,7 +62,7 @@ body::before {
     left: 0;
     background: linear-gradient(0deg, rgba(231, 212, 212, 0.2273109927564776) 16%, rgba(221, 197, 197, 1) 93%);
     z-index: -1;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1.7px);
 }
 
 
@@ -149,6 +149,10 @@ h1 {
     overflow: hidden;
     text-align: justify;
     /* text-transform: lowercase; */
+}
+
+.area__de__texto::placeholder{
+    color: var(--dark-solid-1);
 }
 
 .area__de__texto:focus {

@@ -22,7 +22,7 @@
                     placeholder="Ingrese el texto aquí"></textarea>
                 <div class="seccion__botones">
                     <div class="mensaje__alerta">
-                        <svg class="icono__alerta" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                        <svg class="icono__alerta" id="icono__alerta" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                             viewBox="-2 -1.5 24 24">
                             <path fill="currentColor"
                                 d="M10 20.393c-5.523 0-10-4.477-10-10c0-5.522 4.477-10 10-10s10 4.478 10 10c0 5.523-4.477 10-10 10m0-15a1 1 0 0 0-1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0-1-1m0 10a1 1 0 1 0 0-2a1 1 0 0 0 0 2" />
@@ -30,17 +30,17 @@
                         <p class="mensaje__alerta__estilo" id="mensajeAlerta">Solo letras minúsculas y sin acentos</p>
                     </div>
                     <div class="botones">
-                        <button onclick="encriptar" class="boton">Encriptar</button>
-                        <button class="boton" id="desencriptar">Desencriptar</button>
+                        <button onclick="verificarTexto(true)" class="boton" id="encriptar">Encriptar</button>
+                        <button onclick="verificarTexto(false)" class="boton" id="desencriptar">Desencriptar</button>
                     </div>
                 </div>
             </section>
 
         </div>
         <!-- Sección dendo debe mostarse el mensaje -->
-        <section class="seccion__buscador" id="seccionBuscador">
-            <div class="buscador__inicial">
-                <img class="img__buscador" src="./img/Muñeco.png" alt="buscador">
+        <section class="seccion__buscador">
+            <div class="buscador__inicial" id="seccionBuscador">
+                <img class="img__buscador" id="imgBuscador" src="./img/Muñeco.png" alt="buscador">
                 <div class="textos__buscador">
                     <p class="texto__mensaje1">Ningún mensaje fue encontrado</p>
                     <p class="texto__mensaje2">Ingresa el texto que desees encriptar o desencriptar.</p>
@@ -48,7 +48,7 @@
             </div>
             <textarea class="area__de__texto__buscador" name="textoSecundario" id="areaDeTextoBuscador" cols="30"
                 rows="10" placeholder=""></textarea>
-            <button class="boton__copiar" id="copiar">Copiar</button>
+            <button onclick="copiarTexto()" class="boton__copiar" id="copiar">Copiar</button>
 
         </section>
 
