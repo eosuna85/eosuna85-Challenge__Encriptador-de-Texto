@@ -153,7 +153,7 @@ h1 {
     /* text-transform: lowercase; */
 }
 
-.area__de__texto::placeholder{
+.area__de__texto::placeholder {
     color: var(--dark-solid-1);
 }
 
@@ -275,6 +275,7 @@ h1 {
     resize: none;
     overflow: hidden;
     text-align: justify;
+    padding: 10px;
 }
 
 .area__de__texto__buscador:focus {
@@ -285,6 +286,7 @@ h1 {
     display: none;
     width: 328px;
     padding: 24px;
+    margin: 10px;
     font-family: var(--base-font-family);
     color: var(--secundary-solid);
     background-color: var(--light-font-solid);
@@ -348,25 +350,25 @@ footer::before {
 
     .container {
         max-width: 768px;
-        max-height: 1174px;
+        /* max-height: 1174px; */
         margin: 0 auto;
     }
 
     .main__encriptador {
         display: flex;
-        padding: 60px 40px 20px 40px;
+        padding: 0 40px 40px;
         flex-direction: column;
         /* align-items: center; */
         justify-content: space-between;
-        gap: 64px;
+        gap: 50px;
     }
 
-    header{
+    header {
         flex-wrap: wrap;
         gap: 10px;
     }
 
-    h1{
+    h1 {
         font-size: 40px;
     }
 
@@ -389,9 +391,9 @@ footer::before {
     .ingresar__texto {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 688px;
-        height: 647px;
+        height: 550px;
         padding-top: 0px;
         padding-left: 0px;
     }
@@ -409,7 +411,6 @@ footer::before {
         /* text-transform: lowercase; */
     }
 
-
     .botones {
         display: flex;
         gap: 24px;
@@ -420,37 +421,14 @@ footer::before {
         width: 100% 332px;
         height: auto 67px;
         padding: 24px;
-        font-family: var(--base-font-family);
-        color: var(--light-font-solid);
-        background-color: var(--secundary-solid);
-        border: 1px solid var(--primary-solid);
-        box-shadow: 4px 3px 2px #000000c8;
-        border-radius: 24px;
-        color: var(--White, #FFF);
-        text-align: center;
-        font-size: 16px;
-        font-weight: 400;
-        transition: .3s ease-in-out;
-    }
-
-    .boton:hover {
-        background-color: var(--dark-solid-2);
-        box-shadow: 4px 3px 2px var(--secundary-solid);
     }
 
     /*+ Sección de Buscador */
 
     .seccion__buscador {
         width: 688px;
+        height: 343px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 32px;
-        border: 1px solid var(--primary-solid);
-        border-radius: 32px;
-        background-color: #fff;
-        box-shadow: 4px 3px 2px #000000c8;
     }
 
     .img__buscador {
@@ -482,6 +460,18 @@ footer::before {
         padding: 3px 0;
     }
 
+    .area__de__texto__buscador {
+        display: none;
+        width:600px;
+        height: auto 320px;
+    }
+
+    .boton__copiar {
+        display: none;
+        width: 328px;
+        padding: 18px;
+    }
+
     footer {
         display: flex;
         align-items: center;
@@ -510,11 +500,11 @@ footer::before {
 
     .main__encriptador {
         padding: 24px 24px 40px 24px;
-        justify-content: stretch;
+        align-items: center;
         gap: 30px;
     }
 
-    header{
+    header {
         flex-direction: column;
         align-items: start;
         gap: 8px;
@@ -528,7 +518,7 @@ footer::before {
         margin-bottom: 30px;
     }
 
-    h1{
+    h1 {
         font-size: 30px;
     }
 
@@ -536,11 +526,13 @@ footer::before {
         display: flex;
         flex-direction: column;
         gap: 24px;
+        align-items: center;
         justify-content: center;
+
     }
 
     .boton {
-        width: 100% 332px;
+        width: 430px;
         height: 60px;
         padding: 2px;
         font-family: var(--base-font-family);
@@ -574,9 +566,9 @@ footer::before {
     } */
 
     .seccion__buscador {
-        width: 327px;
-        height: 180px;
         display: flex;
+        width: 430px;
+        height: 180px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -612,11 +604,17 @@ footer::before {
         padding: 3px 0;
     }
 
+    .area__de__texto__buscador {
+        display: none;
+        width: 343px;
+        height: 595px;
+    }
+
     footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 375px;
+        width: 100%;
         padding: 0 10px;
     }
 
