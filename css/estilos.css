@@ -532,7 +532,7 @@ footer::before {
     }
 
     .boton {
-        width: 430px;
+        width: 400px;
         height: 60px;
         padding: 2px;
         font-family: var(--base-font-family);
@@ -553,7 +553,7 @@ footer::before {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        width: 326px;
+        width: 400px;
         height: 460px;
     }
 
@@ -567,7 +567,7 @@ footer::before {
 
     .seccion__buscador {
         display: flex;
-        width: 430px;
+        width: 400px;
         height: 180px;
         flex-direction: column;
         align-items: center;
