@@ -39,7 +39,7 @@ function mensajeAlerta() {
 function copiarTexto() {
     areaDeTextoBuscador.select();
     document.execCommand('cut');
-    alert('Texto copiado al portapapeles: ' + areaDeTextoBuscador.value);
+    alert('Texto copiado al portapapeles!');
 }
 
 //funcion para la llamada de eventos botones
